@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>orzKsIncoShop</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-top: 40px;
+    }
+    h2 {
+      margin-top: 60px;
+      font-size: 1.8em;
+      letter-spacing: 1px;
+    }
+    .brands, .featured-products {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    .brands img, .featured-products img {
+      max-height: 140px;
+      width: auto;
+    }
+    .product {
+      width: 220px;
+    }
+    .product p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .zine-section {
+      margin: 60px 20px;
+    }
+    .zine-section h3 {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+    .zine-section p {
+      font-size: 1em;
+      margin: 5px 0;
+    }
+    .zine-buttons {
+      margin: 20px 0;
+    }
+    .zine-buttons button {
+      background: none;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .zine-buttons button:hover {
+      background: #fff;
+      color: #000;
+    }
+    .tv-img img {
+      width: 300px;
+      max-width: 90%;
+      margin-top: 20px;
+    }
+    .instagram-feed {
+      margin: 60px 0 40px;
+    }
+    .instagram-feed p {
+      font-size: 1em;
+    }
+    @media (max-width: 768px) {
+      .brands, .featured-products {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>orzKsIncoShop</h1>
+
+  <h2>BRANDS</h2>
+  <div class="brands">
+    <img src="images/logo-grindead.png" alt="GRINDEAD" />
+    <img src="images/logo-face.png" alt="Face Art" />
+    <img src="images/logo-kasu.png" alt="カスInco." />
+  </div>
+
+  <h2>FEATURED PRODUCTS</h2>
+  <div class="featured-products">
+    <div class="product">
+      <img src="images/tshirt-grindead-skull.png" alt="GrinDead Tee" />
+      <p>BUY NOW</p>
+    </div>
+    <div class="product">
+      <img src="images/tshirt-1985-neon.png" alt="1985DYSTOPIA Tee" />
+      <p>BUY NOW</p>
+    </div>
+    <div class="product">
+      <img src="images/tshirt-kasu-ran.png" alt="カスInco Tee" />
+      <p>RUN NOW</p>
+    </div>
+  </div>
+
+  <div class="zine-section">
+    <h2>NEW ZINE YOUR ANGER</h2>
+    <h3>新刊「1985年の怒」</h3>
+    <p>カスでダンス、スっていこう。</p>
+    <p>ZINEをシャンで裏がしてください。</p>
+    <div class="zine-buttons">
+      <button>ZINEを拡く</button>
+      <button>Tシャツになる</button>
+    </div>
+    <div class="tv-img">
+      <img src="images/tv-1985.png" alt="TV with 1985DYSTOPIA" />
+    </div>
+  </div>
+
+  <div class="instagram-feed">
+    <h2>INSTAGRAM FEED</h2>
+    <p>-from @orzksincoshop</p>
+  </div>
+</body>
+</html>

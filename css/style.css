@@ -1,0 +1,449 @@
+/* 基本リセットと共通スタイル */
+body {
+    font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ヘッダー */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* ヒーローセクション */
+.hero-section {
+    background: linear-gradient(to bottom right, #e0f2f7, #c1e7f0); /* 柔らかなグラデーション */
+    color: #333;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 70vh; /* 画面の高さの70%を占める */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.shop-links {
+    display: flex;
+    flex-direction: row; /* デフォルトは横並び */
+    gap: 25px;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap; /* 小さい画面で折り返す */
+}
+
+.shop-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 35px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease;
+    min-width: 280px; /* ボタンの最小幅 */
+    box-sizing: border-box; /* paddingを含めた幅計算 */
+}
+
+.shop-button img {
+    height: 35px; /* ロゴの高さ調整 */
+    margin-right: 18px;
+}
+
+.base-button {
+    background-color: #00c400; /* BASEのイメージカラー */
+    box-shadow: 0 5px 15px rgba(0, 196, 0, 0.3);
+}
+
+.base-button:hover {
+    background-color: #00a000;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 196, 0, 0.4);
+}
+
+.teespring-button {
+    background-color: #ff5e00; /* Teespringのイメージカラー */
+    box-shadow: 0 5px 15px rgba(255, 94, 0, 0.3);
+}
+
+.teespring-button:hover {
+    background-color: #cc4b00;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 94, 0, 0.4);
+}
+
+.country-selection-manual {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.country-selection-manual select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    appearance: none; /* デフォルトの矢印を非表示 */
+    background: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%204%205%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M2%200L0%202h4zm0%205L0%203h4z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 10px center;
+    background-size: 12px;
+}
+
+/* 各セクションの共通スタイル */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block; /* 中央揃えのため */
+    width: 100%; /* 中央揃えのため */
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 5px;
+    background-color: #007bff;
+    border-radius: 3px;
+}
+
+/* Aboutセクション */
+.about-section {
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* ピックアップ商品セクション */
+.featured-products-section {
+    background-color: #eaf4f7;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 280px; /* 画像の高さを固定 */
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.product-card h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 25px 20px 10px;
+}
+
+.product-card p {
+    font-size: 1.05em;
+    color: #666;
+    margin: 0 20px 25px;
+    flex-grow: 1;
+}
+
+.view-item-button {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 0 0 12px 12px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.view-item-button:hover {
+    background-color: #0056b3;
+}
+
+/* お問い合わせセクション */
+.contact-section {
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* paddingとborderをwidthに含める */
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none; /* Netlify Formsのhoneypot用 */
+}
+
+/* フッター */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .shop-links {
+        flex-direction: column; /* スマホでは縦並び */
+        width: 100%;
+        align-items: center;
+    }
+
+    .shop-button {
+        width: 90%;
+        max-width: 350px; /* スマホでの最大幅 */
+        font-size: 1.1em;
+        padding: 15px 25px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    section h2 {
+        font-size: 2.2em;
+        margin-bottom: 40px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* スマホでは1列表示 */
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .shop-button {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+    .shop-button img {
+        height: 25px;
+        margin-right: 10px;
+    }
+}
